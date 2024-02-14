@@ -1,0 +1,13 @@
+// Seleccionar todas las imágenes
+const imagenes = document.querySelectorAll('.imagen');
+
+// Agregar evento de 'click' a cada imagen
+imagenes.forEach(imagen => {
+  // Cuando se hace clic en la imagen
+  imagen.addEventListener('click', () => {
+    // Obtener la ruta de la imagen
+    const rutaImagen = imagen.getAttribute('src');
+    // Abrir la imagen en una nueva ventana del navegador
+    window.open(rutaImagen, '_blank');
+  });
+});
